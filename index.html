@@ -44,11 +44,7 @@
           background-color: #333;
         }
     
-        .error {
-          color: red;
-          margin-top: 10px;
         
-        }
          </style>
     </head>
     <body>
@@ -60,32 +56,20 @@
         <label for="password" class="u">Password</label>
         <input type="password" id="password" placeholder="Enter your password" style="color: gray;" required>
     
-        <button type="button" class="l" onclick="goToPreloader()">Login</button>
-        <div id="error-message"></div>
+        <button type="button" class="l" onclick="goToHome()">Login</button>
+        
       </form>
     
       <script>
-        function validateForm() {
-  const username = document.getElementById('username');
-  const password = document.getElementById('password');
-
-  if (username.value.trim() === ""  ) {
-    const errorMessage = document.getElementById('error-message');
-    errorMessage.innerHTML = alert("Please fill out all fields");
-    return false;
-  }
-  if(password.value.trim() === ''){
-    const errorMessage = document.getElementById('error-message');
-    errorMessage.innerHTML = alert("Please fill out all fields");
-    return false;
-  }
-
-  return true;
-}
+       
     
-      function goToPreloader(){
-        if(validateForm() == true)
-     window.location.href = "preloader.html";
+      function goToHome(){
+       const username = document.getElementById("username");
+       const password = document.getElementById("password");
+       if(username.value.trim() === "" || password.value.trim() === "")
+          alert("Please fill all the fields");
+          else
+          window.location.href = "home.html";
      }
       
       </script>
