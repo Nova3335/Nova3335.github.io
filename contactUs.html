@@ -115,29 +115,34 @@
 
   
  <!-- Navigation section with links to other pages -->
- <nav>
-    <ul>
+
+  <nav class="col-12 col-s-2">
+    <ul >
       <li><a href="home.html" class="l">Home</a></li>
       <li><a href="aboutUs.html" class="l">About Us</a></li>
       <li><a href="contactUs.html" class = "l">Contact Us</a></li>
       <li><a href="products.html" class="l">Products</a></li>
-
+      
       
     </ul>
   </nav>
-     <section class="banner">
-        <p>For Complaints</p>
-      </section>
+
+
+  <!-- Banner section with address, phone number, and location -->
+  
+  <section class="banner ">
+    <p >For Complaints</p>
+  </section>
   <!-- Main content section -->
-  <main>
+  <main class="j">
     <h2>Get in touch</h2>
-    <div class="contact-info">
+    <div class="contact-info col-7 col-s-9">
       <div>
         <i class="fas fa-envelope"></i>
         <p>Email us</p>
         <a href="mailto:info@example.com">Mobile4U@hotmail.com</a>
       </div>
-      <div>
+      <div class="col-3 col-s-12" >
         <i class="fas fa-phone"></i>
         <p>Call us</p>
         <a href="tel:+1234567890">+961 80 123456</a>
@@ -148,7 +153,7 @@
         <a href="#">Follow us</a>
       </div>
     </div>
-    <form>
+    <form class="col-8 col-s-11">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
       <label for="email">Email</label>
@@ -157,11 +162,11 @@
       <textarea id="complaint" name="complaint" rows="5" required></textarea>
       <input type="submit" value="Submit">
     </form>
+    
+    <footer style="padding: 10px;">
+      <p>&copy; 2023 Mobile4U. All rights reserved.</p>
+    </footer> 
   </main>
-
-  <!-- JavaScript code to toggle between light and dark modes -->
- 
-
 
 </body>
 </html>
