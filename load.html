@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading Screen</title>
+    <style>
+      body {
+        background-color: #f7dada;
+      }
+      .loader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .loader img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fill 1s ease-in-out forwards, heartbeat 2s ease-in-out infinite;
+      }
+      .loader span {
+        font-size: 2em;
+        opacity: 0;
+        animation: fill 1s ease-in-out forwards, pulse 2s ease-in-out infinite;
+        filter: drop-shadow(0 0 5px #ff4081);
+      }
+      @keyframes fill {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.2);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <h1 style="font-size: 150px;color: red;">&hearts;</h1>
+      <span>Birthday Girl </span>
+    </div>
+    
+    <script>
+      setTimeout(function() {
+        window.location.href = 'Home.html'; // replace with the URL of the new page
+      }, 4000); // 3000 milliseconds = 3 seconds
+    </script>
+
+  </body>
+</html>
